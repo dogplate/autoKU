@@ -1,0 +1,8 @@
+prefix=/home/labdog/autoKU_ws/install
+
+Name: vehicle_control
+Description: Description of vehicle_control
+Version: 0.0.0
+Cflags: -I${prefix}/include
+Libs: -L${prefix}/lib -lvehicle_control
+Requires: roscpp std_msgs

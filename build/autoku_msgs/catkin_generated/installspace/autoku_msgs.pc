@@ -1,0 +1,8 @@
+prefix=/home/labdog/autoKU_ws/install
+
+Name: autoku_msgs
+Description: Description of autoku_msgs
+Version: 0.0.0
+Cflags: -I${prefix}/include
+Libs: -L${prefix}/lib 
+Requires: message_runtime std_msgs geometry_msgs

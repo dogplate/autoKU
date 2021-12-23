@@ -1,0 +1,2 @@
+autoku_msgs:autoku_project/vehicle_control:autoku_project/vehicle_simulator
+-DCATKIN_DEVEL_PREFIX=/home/labdog/autoKU_ws/devel -DCMAKE_INSTALL_PREFIX=/home/labdog/autoKU_ws/install -G Unix Makefiles

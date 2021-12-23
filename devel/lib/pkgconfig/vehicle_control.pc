@@ -1,0 +1,8 @@
+prefix=/home/labdog/autoKU_ws/devel
+
+Name: vehicle_control
+Description: Description of vehicle_control
+Version: 0.0.0
+Cflags: -I/home/labdog/autoKU_ws/src/autoku_project/vehicle_control/include
+Libs: -L${prefix}/lib -lvehicle_control
+Requires: roscpp std_msgs

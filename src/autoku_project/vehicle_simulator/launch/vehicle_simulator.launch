@@ -1,0 +1,12 @@
+<launch>
+    <node pkg="vehicle_simulator" type="model" name="model" output="screen">
+        <param name="init_x" value="183.0" />
+        <param name="init_y" value="354.0" />
+        <param name="init_yaw" value="-1.571" />
+    </node>
+    <node pkg="vehicle_simulator" type="csv2waypoints" name="csv2waypoints" output="screen" />
+    <node pkg="vehicle_simulator" type="display" name="display"/>
+    <node pkg="pcl_ros" type="pcd_to_pointcloud" name="pcd_to_pointcloud" args="/home/labdog/autoKU_ws/KU_planning_data/konkuk-big_visualization.pcd 3 _frame_id:=/world"/>
+    <node type="rviz" name="rviz" pkg="rviz" args="-d $(find vehicle_simulator)/rviz/config.rviz" />
+
+</launch>

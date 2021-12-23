@@ -1,0 +1,8 @@
+prefix=/home/labdog/autoKU_ws/install
+
+Name: vehicle_simulator
+Description: Description of vehicle_simulator
+Version: 0.0.0
+Cflags: -I${prefix}/include -I/usr/include
+Libs: -L${prefix}/lib -lvehicle_simulator /usr/lib/x86_64-linux-gnu/libboost_system.so
+Requires: roscpp std_msgs
