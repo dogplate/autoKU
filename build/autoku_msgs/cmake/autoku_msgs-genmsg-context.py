@@ -1,6 +1,6 @@
 # generated from genmsg/cmake/pkg-genmsg.context.in
 
-messages_str = "/home/labdog/autoKU_ws/src/autoku_msgs/msg/VehicleOutput.msg;/home/labdog/autoKU_ws/src/autoku_msgs/msg/VehicleInput.msg;/home/labdog/autoKU_ws/src/autoku_msgs/msg/WaypointData.msg"
+messages_str = "/home/labdog/autoKU_ws/src/autoku_msgs/msg/VehicleOutput.msg;/home/labdog/autoKU_ws/src/autoku_msgs/msg/VehicleInput.msg;/home/labdog/autoKU_ws/src/autoku_msgs/msg/WaypointData.msg;/home/labdog/autoKU_ws/src/autoku_msgs/msg/LocalWaypointData.msg"
 services_str = ""
 pkg_name = "autoku_msgs"
 dependencies_str = "geometry_msgs;std_msgs"

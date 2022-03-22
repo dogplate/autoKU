@@ -1,4 +1,5 @@
 file(REMOVE_RECURSE
+  "/home/labdog/autoKU_ws/devel/include/autoku_msgs/LocalWaypointData.h"
   "/home/labdog/autoKU_ws/devel/include/autoku_msgs/VehicleInput.h"
   "/home/labdog/autoKU_ws/devel/include/autoku_msgs/VehicleOutput.h"
   "/home/labdog/autoKU_ws/devel/include/autoku_msgs/WaypointData.h"

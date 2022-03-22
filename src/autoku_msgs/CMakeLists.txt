@@ -52,6 +52,7 @@ add_message_files(
   VehicleOutput.msg
   VehicleInput.msg
   WaypointData.msg
+  LocalWaypointData.msg
 )
 
 ## Generate services in the 'srv' folder

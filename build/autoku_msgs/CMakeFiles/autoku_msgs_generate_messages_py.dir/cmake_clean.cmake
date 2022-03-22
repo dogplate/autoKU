@@ -1,4 +1,5 @@
 file(REMOVE_RECURSE
+  "/home/labdog/autoKU_ws/devel/lib/python2.7/dist-packages/autoku_msgs/msg/_LocalWaypointData.py"
   "/home/labdog/autoKU_ws/devel/lib/python2.7/dist-packages/autoku_msgs/msg/_VehicleInput.py"
   "/home/labdog/autoKU_ws/devel/lib/python2.7/dist-packages/autoku_msgs/msg/_VehicleOutput.py"
   "/home/labdog/autoKU_ws/devel/lib/python2.7/dist-packages/autoku_msgs/msg/_WaypointData.py"

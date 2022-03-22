@@ -1,8 +1,8 @@
 <launch>
     <node pkg="vehicle_simulator" type="model" name="model" output="screen">
-        <param name="init_x" value="183.0" />
-        <param name="init_y" value="354.0" />
-        <param name="init_yaw" value="-1.571" />
+        <param name="init_x" value="334.0" />
+        <param name="init_y" value="351.0" />
+        <param name="init_yaw" value="1.571" />
     </node>
     <node pkg="vehicle_simulator" type="csv2waypoints" name="csv2waypoints" output="screen" />
     <node pkg="vehicle_simulator" type="display" name="display"/>

@@ -112,6 +112,17 @@ rebuild_cache/fast: rebuild_cache
 
 .PHONY : rebuild_cache/fast
 
+# Special rule for the target test
+test:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
+	/usr/local/bin/ctest --force-new-ctest-process $(ARGS)
+.PHONY : test
+
+# Special rule for the target test
+test/fast: test
+
+.PHONY : test/fast
+
 # Special rule for the target install/strip
 install/strip: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
@@ -123,17 +134,6 @@ install/strip/fast: preinstall/fast
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
 	/usr/local/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
 .PHONY : install/strip/fast
-
-# Special rule for the target test
-test:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
-	/usr/local/bin/ctest --force-new-ctest-process $(ARGS)
-.PHONY : test
-
-# Special rule for the target test
-test/fast: test
-
-.PHONY : test/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -168,19 +168,19 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-autoku_project/vehicle_control/CMakeFiles/tf_generate_messages_eus.dir/rule:
-	cd /home/labdog/autoKU_ws/build && $(MAKE) -f CMakeFiles/Makefile2 autoku_project/vehicle_control/CMakeFiles/tf_generate_messages_eus.dir/rule
-.PHONY : autoku_project/vehicle_control/CMakeFiles/tf_generate_messages_eus.dir/rule
+autoku_project/vehicle_control/CMakeFiles/controller.dir/rule:
+	cd /home/labdog/autoKU_ws/build && $(MAKE) -f CMakeFiles/Makefile2 autoku_project/vehicle_control/CMakeFiles/controller.dir/rule
+.PHONY : autoku_project/vehicle_control/CMakeFiles/controller.dir/rule
 
 # Convenience name for target.
-tf_generate_messages_eus: autoku_project/vehicle_control/CMakeFiles/tf_generate_messages_eus.dir/rule
+controller: autoku_project/vehicle_control/CMakeFiles/controller.dir/rule
 
-.PHONY : tf_generate_messages_eus
+.PHONY : controller
 
 # fast build rule for target.
-tf_generate_messages_eus/fast:
-	cd /home/labdog/autoKU_ws/build && $(MAKE) -f autoku_project/vehicle_control/CMakeFiles/tf_generate_messages_eus.dir/build.make autoku_project/vehicle_control/CMakeFiles/tf_generate_messages_eus.dir/build
-.PHONY : tf_generate_messages_eus/fast
+controller/fast:
+	cd /home/labdog/autoKU_ws/build && $(MAKE) -f autoku_project/vehicle_control/CMakeFiles/controller.dir/build.make autoku_project/vehicle_control/CMakeFiles/controller.dir/build
+.PHONY : controller/fast
 
 # Convenience name for target.
 autoku_project/vehicle_control/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/rule:
@@ -468,6 +468,36 @@ sensor_msgs_generate_messages_lisp/fast:
 .PHONY : sensor_msgs_generate_messages_lisp/fast
 
 # Convenience name for target.
+autoku_project/vehicle_control/CMakeFiles/tf_generate_messages_eus.dir/rule:
+	cd /home/labdog/autoKU_ws/build && $(MAKE) -f CMakeFiles/Makefile2 autoku_project/vehicle_control/CMakeFiles/tf_generate_messages_eus.dir/rule
+.PHONY : autoku_project/vehicle_control/CMakeFiles/tf_generate_messages_eus.dir/rule
+
+# Convenience name for target.
+tf_generate_messages_eus: autoku_project/vehicle_control/CMakeFiles/tf_generate_messages_eus.dir/rule
+
+.PHONY : tf_generate_messages_eus
+
+# fast build rule for target.
+tf_generate_messages_eus/fast:
+	cd /home/labdog/autoKU_ws/build && $(MAKE) -f autoku_project/vehicle_control/CMakeFiles/tf_generate_messages_eus.dir/build.make autoku_project/vehicle_control/CMakeFiles/tf_generate_messages_eus.dir/build
+.PHONY : tf_generate_messages_eus/fast
+
+# Convenience name for target.
+autoku_project/vehicle_control/CMakeFiles/waypoint_generator.dir/rule:
+	cd /home/labdog/autoKU_ws/build && $(MAKE) -f CMakeFiles/Makefile2 autoku_project/vehicle_control/CMakeFiles/waypoint_generator.dir/rule
+.PHONY : autoku_project/vehicle_control/CMakeFiles/waypoint_generator.dir/rule
+
+# Convenience name for target.
+waypoint_generator: autoku_project/vehicle_control/CMakeFiles/waypoint_generator.dir/rule
+
+.PHONY : waypoint_generator
+
+# fast build rule for target.
+waypoint_generator/fast:
+	cd /home/labdog/autoKU_ws/build && $(MAKE) -f autoku_project/vehicle_control/CMakeFiles/waypoint_generator.dir/build.make autoku_project/vehicle_control/CMakeFiles/waypoint_generator.dir/build
+.PHONY : waypoint_generator/fast
+
+# Convenience name for target.
 autoku_project/vehicle_control/CMakeFiles/actionlib_generate_messages_cpp.dir/rule:
 	cd /home/labdog/autoKU_ws/build && $(MAKE) -f CMakeFiles/Makefile2 autoku_project/vehicle_control/CMakeFiles/actionlib_generate_messages_cpp.dir/rule
 .PHONY : autoku_project/vehicle_control/CMakeFiles/actionlib_generate_messages_cpp.dir/rule
@@ -571,6 +601,21 @@ actionlib_generate_messages_lisp: autoku_project/vehicle_control/CMakeFiles/acti
 actionlib_generate_messages_lisp/fast:
 	cd /home/labdog/autoKU_ws/build && $(MAKE) -f autoku_project/vehicle_control/CMakeFiles/actionlib_generate_messages_lisp.dir/build.make autoku_project/vehicle_control/CMakeFiles/actionlib_generate_messages_lisp.dir/build
 .PHONY : actionlib_generate_messages_lisp/fast
+
+# Convenience name for target.
+autoku_project/vehicle_control/CMakeFiles/actionlib_generate_messages_nodejs.dir/rule:
+	cd /home/labdog/autoKU_ws/build && $(MAKE) -f CMakeFiles/Makefile2 autoku_project/vehicle_control/CMakeFiles/actionlib_generate_messages_nodejs.dir/rule
+.PHONY : autoku_project/vehicle_control/CMakeFiles/actionlib_generate_messages_nodejs.dir/rule
+
+# Convenience name for target.
+actionlib_generate_messages_nodejs: autoku_project/vehicle_control/CMakeFiles/actionlib_generate_messages_nodejs.dir/rule
+
+.PHONY : actionlib_generate_messages_nodejs
+
+# fast build rule for target.
+actionlib_generate_messages_nodejs/fast:
+	cd /home/labdog/autoKU_ws/build && $(MAKE) -f autoku_project/vehicle_control/CMakeFiles/actionlib_generate_messages_nodejs.dir/build.make autoku_project/vehicle_control/CMakeFiles/actionlib_generate_messages_nodejs.dir/build
+.PHONY : actionlib_generate_messages_nodejs/fast
 
 # Convenience name for target.
 autoku_project/vehicle_control/CMakeFiles/actionlib_generate_messages_py.dir/rule:
@@ -677,20 +722,59 @@ tf2_msgs_generate_messages_lisp/fast:
 	cd /home/labdog/autoKU_ws/build && $(MAKE) -f autoku_project/vehicle_control/CMakeFiles/tf2_msgs_generate_messages_lisp.dir/build.make autoku_project/vehicle_control/CMakeFiles/tf2_msgs_generate_messages_lisp.dir/build
 .PHONY : tf2_msgs_generate_messages_lisp/fast
 
-# Convenience name for target.
-autoku_project/vehicle_control/CMakeFiles/actionlib_generate_messages_nodejs.dir/rule:
-	cd /home/labdog/autoKU_ws/build && $(MAKE) -f CMakeFiles/Makefile2 autoku_project/vehicle_control/CMakeFiles/actionlib_generate_messages_nodejs.dir/rule
-.PHONY : autoku_project/vehicle_control/CMakeFiles/actionlib_generate_messages_nodejs.dir/rule
+src/controller.o: src/controller.cpp.o
 
-# Convenience name for target.
-actionlib_generate_messages_nodejs: autoku_project/vehicle_control/CMakeFiles/actionlib_generate_messages_nodejs.dir/rule
+.PHONY : src/controller.o
 
-.PHONY : actionlib_generate_messages_nodejs
+# target to build an object file
+src/controller.cpp.o:
+	cd /home/labdog/autoKU_ws/build && $(MAKE) -f autoku_project/vehicle_control/CMakeFiles/controller.dir/build.make autoku_project/vehicle_control/CMakeFiles/controller.dir/src/controller.cpp.o
+.PHONY : src/controller.cpp.o
 
-# fast build rule for target.
-actionlib_generate_messages_nodejs/fast:
-	cd /home/labdog/autoKU_ws/build && $(MAKE) -f autoku_project/vehicle_control/CMakeFiles/actionlib_generate_messages_nodejs.dir/build.make autoku_project/vehicle_control/CMakeFiles/actionlib_generate_messages_nodejs.dir/build
-.PHONY : actionlib_generate_messages_nodejs/fast
+src/controller.i: src/controller.cpp.i
+
+.PHONY : src/controller.i
+
+# target to preprocess a source file
+src/controller.cpp.i:
+	cd /home/labdog/autoKU_ws/build && $(MAKE) -f autoku_project/vehicle_control/CMakeFiles/controller.dir/build.make autoku_project/vehicle_control/CMakeFiles/controller.dir/src/controller.cpp.i
+.PHONY : src/controller.cpp.i
+
+src/controller.s: src/controller.cpp.s
+
+.PHONY : src/controller.s
+
+# target to generate assembly for a file
+src/controller.cpp.s:
+	cd /home/labdog/autoKU_ws/build && $(MAKE) -f autoku_project/vehicle_control/CMakeFiles/controller.dir/build.make autoku_project/vehicle_control/CMakeFiles/controller.dir/src/controller.cpp.s
+.PHONY : src/controller.cpp.s
+
+src/local_waypoint_generator.o: src/local_waypoint_generator.cpp.o
+
+.PHONY : src/local_waypoint_generator.o
+
+# target to build an object file
+src/local_waypoint_generator.cpp.o:
+	cd /home/labdog/autoKU_ws/build && $(MAKE) -f autoku_project/vehicle_control/CMakeFiles/waypoint_generator.dir/build.make autoku_project/vehicle_control/CMakeFiles/waypoint_generator.dir/src/local_waypoint_generator.cpp.o
+.PHONY : src/local_waypoint_generator.cpp.o
+
+src/local_waypoint_generator.i: src/local_waypoint_generator.cpp.i
+
+.PHONY : src/local_waypoint_generator.i
+
+# target to preprocess a source file
+src/local_waypoint_generator.cpp.i:
+	cd /home/labdog/autoKU_ws/build && $(MAKE) -f autoku_project/vehicle_control/CMakeFiles/waypoint_generator.dir/build.make autoku_project/vehicle_control/CMakeFiles/waypoint_generator.dir/src/local_waypoint_generator.cpp.i
+.PHONY : src/local_waypoint_generator.cpp.i
+
+src/local_waypoint_generator.s: src/local_waypoint_generator.cpp.s
+
+.PHONY : src/local_waypoint_generator.s
+
+# target to generate assembly for a file
+src/local_waypoint_generator.cpp.s:
+	cd /home/labdog/autoKU_ws/build && $(MAKE) -f autoku_project/vehicle_control/CMakeFiles/waypoint_generator.dir/build.make autoku_project/vehicle_control/CMakeFiles/waypoint_generator.dir/src/local_waypoint_generator.cpp.s
+.PHONY : src/local_waypoint_generator.cpp.s
 
 # Help Target
 help:
@@ -701,7 +785,7 @@ help:
 	@echo "... install"
 	@echo "... list_install_components"
 	@echo "... edit_cache"
-	@echo "... tf_generate_messages_eus"
+	@echo "... controller"
 	@echo "... rosgraph_msgs_generate_messages_eus"
 	@echo "... actionlib_msgs_generate_messages_cpp"
 	@echo "... tf_generate_messages_cpp"
@@ -722,6 +806,8 @@ help:
 	@echo "... roscpp_generate_messages_py"
 	@echo "... install/local"
 	@echo "... sensor_msgs_generate_messages_lisp"
+	@echo "... tf_generate_messages_eus"
+	@echo "... waypoint_generator"
 	@echo "... rebuild_cache"
 	@echo "... actionlib_generate_messages_cpp"
 	@echo "... roscpp_generate_messages_cpp"
@@ -730,6 +816,8 @@ help:
 	@echo "... tf_generate_messages_py"
 	@echo "... sensor_msgs_generate_messages_py"
 	@echo "... actionlib_generate_messages_lisp"
+	@echo "... test"
+	@echo "... actionlib_generate_messages_nodejs"
 	@echo "... actionlib_generate_messages_py"
 	@echo "... actionlib_msgs_generate_messages_eus"
 	@echo "... actionlib_msgs_generate_messages_lisp"
@@ -738,8 +826,12 @@ help:
 	@echo "... install/strip"
 	@echo "... tf2_msgs_generate_messages_py"
 	@echo "... tf2_msgs_generate_messages_lisp"
-	@echo "... actionlib_generate_messages_nodejs"
-	@echo "... test"
+	@echo "... src/controller.o"
+	@echo "... src/controller.i"
+	@echo "... src/controller.s"
+	@echo "... src/local_waypoint_generator.o"
+	@echo "... src/local_waypoint_generator.i"
+	@echo "... src/local_waypoint_generator.s"
 .PHONY : help
 
 

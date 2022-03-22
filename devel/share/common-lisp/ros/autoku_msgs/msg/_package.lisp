@@ -1,8 +1,8 @@
 (cl:defpackage autoku_msgs-msg
   (:use )
   (:export
-   "<ACCELBRAKESTEERING>"
-   "ACCELBRAKESTEERING"
+   "<LOCALWAYPOINTDATA>"
+   "LOCALWAYPOINTDATA"
    "<VEHICLEINPUT>"
    "VEHICLEINPUT"
    "<VEHICLEOUTPUT>"

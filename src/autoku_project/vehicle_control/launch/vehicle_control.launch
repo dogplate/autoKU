@@ -1,3 +1,4 @@
 <launch>
-  <node pkg="vehicle_control" type="cmd_input.py" name="driving_input"  output="screen" />
+  <node pkg="vehicle_control" type="waypoint_generator" name="waypoint_generator"  output="screen" />
+  <node pkg="vehicle_control" type="controller" name="controller" output="screen" />
 </launch>

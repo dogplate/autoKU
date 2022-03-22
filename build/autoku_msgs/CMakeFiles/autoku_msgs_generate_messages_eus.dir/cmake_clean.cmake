@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "/home/labdog/autoKU_ws/devel/share/roseus/ros/autoku_msgs/manifest.l"
+  "/home/labdog/autoKU_ws/devel/share/roseus/ros/autoku_msgs/msg/LocalWaypointData.l"
   "/home/labdog/autoKU_ws/devel/share/roseus/ros/autoku_msgs/msg/VehicleInput.l"
   "/home/labdog/autoKU_ws/devel/share/roseus/ros/autoku_msgs/msg/VehicleOutput.l"
   "/home/labdog/autoKU_ws/devel/share/roseus/ros/autoku_msgs/msg/WaypointData.l"

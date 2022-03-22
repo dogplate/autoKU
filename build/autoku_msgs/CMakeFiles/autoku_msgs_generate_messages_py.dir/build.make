@@ -53,36 +53,45 @@ CMAKE_BINARY_DIR = /home/labdog/autoKU_ws/build
 # Include the progress variables for this target.
 include autoku_msgs/CMakeFiles/autoku_msgs_generate_messages_py.dir/progress.make
 
+autoku_msgs/CMakeFiles/autoku_msgs_generate_messages_py: /home/labdog/autoKU_ws/devel/lib/python2.7/dist-packages/autoku_msgs/msg/_LocalWaypointData.py
 autoku_msgs/CMakeFiles/autoku_msgs_generate_messages_py: /home/labdog/autoKU_ws/devel/lib/python2.7/dist-packages/autoku_msgs/msg/_VehicleInput.py
 autoku_msgs/CMakeFiles/autoku_msgs_generate_messages_py: /home/labdog/autoKU_ws/devel/lib/python2.7/dist-packages/autoku_msgs/msg/_VehicleOutput.py
 autoku_msgs/CMakeFiles/autoku_msgs_generate_messages_py: /home/labdog/autoKU_ws/devel/lib/python2.7/dist-packages/autoku_msgs/msg/_WaypointData.py
 autoku_msgs/CMakeFiles/autoku_msgs_generate_messages_py: /home/labdog/autoKU_ws/devel/lib/python2.7/dist-packages/autoku_msgs/msg/__init__.py
 
 
+/home/labdog/autoKU_ws/devel/lib/python2.7/dist-packages/autoku_msgs/msg/_LocalWaypointData.py: /opt/ros/melodic/lib/genpy/genmsg_py.py
+/home/labdog/autoKU_ws/devel/lib/python2.7/dist-packages/autoku_msgs/msg/_LocalWaypointData.py: /home/labdog/autoKU_ws/src/autoku_msgs/msg/LocalWaypointData.msg
+/home/labdog/autoKU_ws/devel/lib/python2.7/dist-packages/autoku_msgs/msg/_LocalWaypointData.py: /opt/ros/melodic/share/geometry_msgs/msg/Point.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/labdog/autoKU_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Python from MSG autoku_msgs/LocalWaypointData"
+	cd /home/labdog/autoKU_ws/build/autoku_msgs && ../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/labdog/autoKU_ws/src/autoku_msgs/msg/LocalWaypointData.msg -Iautoku_msgs:/home/labdog/autoKU_ws/src/autoku_msgs/msg -Igeometry_msgs:/opt/ros/melodic/share/geometry_msgs/cmake/../msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p autoku_msgs -o /home/labdog/autoKU_ws/devel/lib/python2.7/dist-packages/autoku_msgs/msg
+
 /home/labdog/autoKU_ws/devel/lib/python2.7/dist-packages/autoku_msgs/msg/_VehicleInput.py: /opt/ros/melodic/lib/genpy/genmsg_py.py
 /home/labdog/autoKU_ws/devel/lib/python2.7/dist-packages/autoku_msgs/msg/_VehicleInput.py: /home/labdog/autoKU_ws/src/autoku_msgs/msg/VehicleInput.msg
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/labdog/autoKU_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Python from MSG autoku_msgs/VehicleInput"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/labdog/autoKU_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating Python from MSG autoku_msgs/VehicleInput"
 	cd /home/labdog/autoKU_ws/build/autoku_msgs && ../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/labdog/autoKU_ws/src/autoku_msgs/msg/VehicleInput.msg -Iautoku_msgs:/home/labdog/autoKU_ws/src/autoku_msgs/msg -Igeometry_msgs:/opt/ros/melodic/share/geometry_msgs/cmake/../msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p autoku_msgs -o /home/labdog/autoKU_ws/devel/lib/python2.7/dist-packages/autoku_msgs/msg
 
 /home/labdog/autoKU_ws/devel/lib/python2.7/dist-packages/autoku_msgs/msg/_VehicleOutput.py: /opt/ros/melodic/lib/genpy/genmsg_py.py
 /home/labdog/autoKU_ws/devel/lib/python2.7/dist-packages/autoku_msgs/msg/_VehicleOutput.py: /home/labdog/autoKU_ws/src/autoku_msgs/msg/VehicleOutput.msg
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/labdog/autoKU_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating Python from MSG autoku_msgs/VehicleOutput"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/labdog/autoKU_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating Python from MSG autoku_msgs/VehicleOutput"
 	cd /home/labdog/autoKU_ws/build/autoku_msgs && ../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/labdog/autoKU_ws/src/autoku_msgs/msg/VehicleOutput.msg -Iautoku_msgs:/home/labdog/autoKU_ws/src/autoku_msgs/msg -Igeometry_msgs:/opt/ros/melodic/share/geometry_msgs/cmake/../msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p autoku_msgs -o /home/labdog/autoKU_ws/devel/lib/python2.7/dist-packages/autoku_msgs/msg
 
 /home/labdog/autoKU_ws/devel/lib/python2.7/dist-packages/autoku_msgs/msg/_WaypointData.py: /opt/ros/melodic/lib/genpy/genmsg_py.py
 /home/labdog/autoKU_ws/devel/lib/python2.7/dist-packages/autoku_msgs/msg/_WaypointData.py: /home/labdog/autoKU_ws/src/autoku_msgs/msg/WaypointData.msg
 /home/labdog/autoKU_ws/devel/lib/python2.7/dist-packages/autoku_msgs/msg/_WaypointData.py: /opt/ros/melodic/share/geometry_msgs/msg/Point.msg
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/labdog/autoKU_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating Python from MSG autoku_msgs/WaypointData"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/labdog/autoKU_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating Python from MSG autoku_msgs/WaypointData"
 	cd /home/labdog/autoKU_ws/build/autoku_msgs && ../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/labdog/autoKU_ws/src/autoku_msgs/msg/WaypointData.msg -Iautoku_msgs:/home/labdog/autoKU_ws/src/autoku_msgs/msg -Igeometry_msgs:/opt/ros/melodic/share/geometry_msgs/cmake/../msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p autoku_msgs -o /home/labdog/autoKU_ws/devel/lib/python2.7/dist-packages/autoku_msgs/msg
 
 /home/labdog/autoKU_ws/devel/lib/python2.7/dist-packages/autoku_msgs/msg/__init__.py: /opt/ros/melodic/lib/genpy/genmsg_py.py
+/home/labdog/autoKU_ws/devel/lib/python2.7/dist-packages/autoku_msgs/msg/__init__.py: /home/labdog/autoKU_ws/devel/lib/python2.7/dist-packages/autoku_msgs/msg/_LocalWaypointData.py
 /home/labdog/autoKU_ws/devel/lib/python2.7/dist-packages/autoku_msgs/msg/__init__.py: /home/labdog/autoKU_ws/devel/lib/python2.7/dist-packages/autoku_msgs/msg/_VehicleInput.py
 /home/labdog/autoKU_ws/devel/lib/python2.7/dist-packages/autoku_msgs/msg/__init__.py: /home/labdog/autoKU_ws/devel/lib/python2.7/dist-packages/autoku_msgs/msg/_VehicleOutput.py
 /home/labdog/autoKU_ws/devel/lib/python2.7/dist-packages/autoku_msgs/msg/__init__.py: /home/labdog/autoKU_ws/devel/lib/python2.7/dist-packages/autoku_msgs/msg/_WaypointData.py
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/labdog/autoKU_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating Python msg __init__.py for autoku_msgs"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/labdog/autoKU_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Generating Python msg __init__.py for autoku_msgs"
 	cd /home/labdog/autoKU_ws/build/autoku_msgs && ../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py -o /home/labdog/autoKU_ws/devel/lib/python2.7/dist-packages/autoku_msgs/msg --initpy
 
 autoku_msgs_generate_messages_py: autoku_msgs/CMakeFiles/autoku_msgs_generate_messages_py
+autoku_msgs_generate_messages_py: /home/labdog/autoKU_ws/devel/lib/python2.7/dist-packages/autoku_msgs/msg/_LocalWaypointData.py
 autoku_msgs_generate_messages_py: /home/labdog/autoKU_ws/devel/lib/python2.7/dist-packages/autoku_msgs/msg/_VehicleInput.py
 autoku_msgs_generate_messages_py: /home/labdog/autoKU_ws/devel/lib/python2.7/dist-packages/autoku_msgs/msg/_VehicleOutput.py
 autoku_msgs_generate_messages_py: /home/labdog/autoKU_ws/devel/lib/python2.7/dist-packages/autoku_msgs/msg/_WaypointData.py

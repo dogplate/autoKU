@@ -1,0 +1,3 @@
+<launch>
+  <node pkg="vehicle_control" type="cmd_input.py" name="driving_input"  output="screen" />
+</launch>

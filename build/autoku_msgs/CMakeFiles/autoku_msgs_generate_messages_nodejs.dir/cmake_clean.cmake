@@ -1,4 +1,5 @@
 file(REMOVE_RECURSE
+  "/home/labdog/autoKU_ws/devel/share/gennodejs/ros/autoku_msgs/msg/LocalWaypointData.js"
   "/home/labdog/autoKU_ws/devel/share/gennodejs/ros/autoku_msgs/msg/VehicleInput.js"
   "/home/labdog/autoKU_ws/devel/share/gennodejs/ros/autoku_msgs/msg/VehicleOutput.js"
   "/home/labdog/autoKU_ws/devel/share/gennodejs/ros/autoku_msgs/msg/WaypointData.js"

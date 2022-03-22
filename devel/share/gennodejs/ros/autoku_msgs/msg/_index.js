@@ -1,14 +1,14 @@
 
 "use strict";
 
-let AccelBrakeSteering = require('./AccelBrakeSteering.js');
 let VehicleInput = require('./VehicleInput.js');
 let WaypointData = require('./WaypointData.js');
+let LocalWaypointData = require('./LocalWaypointData.js');
 let VehicleOutput = require('./VehicleOutput.js');
 
 module.exports = {
-  AccelBrakeSteering: AccelBrakeSteering,
   VehicleInput: VehicleInput,
   WaypointData: WaypointData,
+  LocalWaypointData: LocalWaypointData,
   VehicleOutput: VehicleOutput,
 };

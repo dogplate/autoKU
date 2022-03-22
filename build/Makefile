@@ -337,6 +337,19 @@ autoku_msgs_gencpp/fast:
 .PHONY : autoku_msgs_gencpp/fast
 
 #=============================================================================
+# Target rules for targets named autoku_msgs_generate_messages_cpp
+
+# Build rule for target.
+autoku_msgs_generate_messages_cpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 autoku_msgs_generate_messages_cpp
+.PHONY : autoku_msgs_generate_messages_cpp
+
+# fast build rule for target.
+autoku_msgs_generate_messages_cpp/fast:
+	$(MAKE) -f autoku_msgs/CMakeFiles/autoku_msgs_generate_messages_cpp.dir/build.make autoku_msgs/CMakeFiles/autoku_msgs_generate_messages_cpp.dir/build
+.PHONY : autoku_msgs_generate_messages_cpp/fast
+
+#=============================================================================
 # Target rules for targets named geometry_msgs_generate_messages_nodejs
 
 # Build rule for target.
@@ -571,6 +584,19 @@ std_msgs_generate_messages_nodejs/fast:
 .PHONY : std_msgs_generate_messages_nodejs/fast
 
 #=============================================================================
+# Target rules for targets named _autoku_msgs_generate_messages_check_deps_LocalWaypointData
+
+# Build rule for target.
+_autoku_msgs_generate_messages_check_deps_LocalWaypointData: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _autoku_msgs_generate_messages_check_deps_LocalWaypointData
+.PHONY : _autoku_msgs_generate_messages_check_deps_LocalWaypointData
+
+# fast build rule for target.
+_autoku_msgs_generate_messages_check_deps_LocalWaypointData/fast:
+	$(MAKE) -f autoku_msgs/CMakeFiles/_autoku_msgs_generate_messages_check_deps_LocalWaypointData.dir/build.make autoku_msgs/CMakeFiles/_autoku_msgs_generate_messages_check_deps_LocalWaypointData.dir/build
+.PHONY : _autoku_msgs_generate_messages_check_deps_LocalWaypointData/fast
+
+#=============================================================================
 # Target rules for targets named std_msgs_generate_messages_py
 
 # Build rule for target.
@@ -597,30 +623,17 @@ autoku_msgs_generate_messages/fast:
 .PHONY : autoku_msgs_generate_messages/fast
 
 #=============================================================================
-# Target rules for targets named autoku_msgs_generate_messages_cpp
+# Target rules for targets named controller
 
 # Build rule for target.
-autoku_msgs_generate_messages_cpp: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 autoku_msgs_generate_messages_cpp
-.PHONY : autoku_msgs_generate_messages_cpp
+controller: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 controller
+.PHONY : controller
 
 # fast build rule for target.
-autoku_msgs_generate_messages_cpp/fast:
-	$(MAKE) -f autoku_msgs/CMakeFiles/autoku_msgs_generate_messages_cpp.dir/build.make autoku_msgs/CMakeFiles/autoku_msgs_generate_messages_cpp.dir/build
-.PHONY : autoku_msgs_generate_messages_cpp/fast
-
-#=============================================================================
-# Target rules for targets named tf_generate_messages_eus
-
-# Build rule for target.
-tf_generate_messages_eus: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 tf_generate_messages_eus
-.PHONY : tf_generate_messages_eus
-
-# fast build rule for target.
-tf_generate_messages_eus/fast:
-	$(MAKE) -f autoku_project/vehicle_control/CMakeFiles/tf_generate_messages_eus.dir/build.make autoku_project/vehicle_control/CMakeFiles/tf_generate_messages_eus.dir/build
-.PHONY : tf_generate_messages_eus/fast
+controller/fast:
+	$(MAKE) -f autoku_project/vehicle_control/CMakeFiles/controller.dir/build.make autoku_project/vehicle_control/CMakeFiles/controller.dir/build
+.PHONY : controller/fast
 
 #=============================================================================
 # Target rules for targets named rosgraph_msgs_generate_messages_eus
@@ -870,6 +883,32 @@ sensor_msgs_generate_messages_lisp/fast:
 .PHONY : sensor_msgs_generate_messages_lisp/fast
 
 #=============================================================================
+# Target rules for targets named tf_generate_messages_eus
+
+# Build rule for target.
+tf_generate_messages_eus: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 tf_generate_messages_eus
+.PHONY : tf_generate_messages_eus
+
+# fast build rule for target.
+tf_generate_messages_eus/fast:
+	$(MAKE) -f autoku_project/vehicle_control/CMakeFiles/tf_generate_messages_eus.dir/build.make autoku_project/vehicle_control/CMakeFiles/tf_generate_messages_eus.dir/build
+.PHONY : tf_generate_messages_eus/fast
+
+#=============================================================================
+# Target rules for targets named waypoint_generator
+
+# Build rule for target.
+waypoint_generator: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 waypoint_generator
+.PHONY : waypoint_generator
+
+# fast build rule for target.
+waypoint_generator/fast:
+	$(MAKE) -f autoku_project/vehicle_control/CMakeFiles/waypoint_generator.dir/build.make autoku_project/vehicle_control/CMakeFiles/waypoint_generator.dir/build
+.PHONY : waypoint_generator/fast
+
+#=============================================================================
 # Target rules for targets named actionlib_generate_messages_cpp
 
 # Build rule for target.
@@ -959,6 +998,19 @@ actionlib_generate_messages_lisp: cmake_check_build_system
 actionlib_generate_messages_lisp/fast:
 	$(MAKE) -f autoku_project/vehicle_control/CMakeFiles/actionlib_generate_messages_lisp.dir/build.make autoku_project/vehicle_control/CMakeFiles/actionlib_generate_messages_lisp.dir/build
 .PHONY : actionlib_generate_messages_lisp/fast
+
+#=============================================================================
+# Target rules for targets named actionlib_generate_messages_nodejs
+
+# Build rule for target.
+actionlib_generate_messages_nodejs: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 actionlib_generate_messages_nodejs
+.PHONY : actionlib_generate_messages_nodejs
+
+# fast build rule for target.
+actionlib_generate_messages_nodejs/fast:
+	$(MAKE) -f autoku_project/vehicle_control/CMakeFiles/actionlib_generate_messages_nodejs.dir/build.make autoku_project/vehicle_control/CMakeFiles/actionlib_generate_messages_nodejs.dir/build
+.PHONY : actionlib_generate_messages_nodejs/fast
 
 #=============================================================================
 # Target rules for targets named actionlib_generate_messages_py
@@ -1052,19 +1104,6 @@ tf2_msgs_generate_messages_lisp/fast:
 .PHONY : tf2_msgs_generate_messages_lisp/fast
 
 #=============================================================================
-# Target rules for targets named actionlib_generate_messages_nodejs
-
-# Build rule for target.
-actionlib_generate_messages_nodejs: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 actionlib_generate_messages_nodejs
-.PHONY : actionlib_generate_messages_nodejs
-
-# fast build rule for target.
-actionlib_generate_messages_nodejs/fast:
-	$(MAKE) -f autoku_project/vehicle_control/CMakeFiles/actionlib_generate_messages_nodejs.dir/build.make autoku_project/vehicle_control/CMakeFiles/actionlib_generate_messages_nodejs.dir/build
-.PHONY : actionlib_generate_messages_nodejs/fast
-
-#=============================================================================
 # Target rules for targets named display
 
 # Build rule for target.
@@ -1129,6 +1168,7 @@ help:
 	@echo "... autoku_msgs_genlisp"
 	@echo "... autoku_msgs_generate_messages_eus"
 	@echo "... autoku_msgs_gencpp"
+	@echo "... autoku_msgs_generate_messages_cpp"
 	@echo "... geometry_msgs_generate_messages_nodejs"
 	@echo "... autoku_msgs_generate_messages_py"
 	@echo "... autoku_msgs_generate_messages_lisp"
@@ -1147,10 +1187,10 @@ help:
 	@echo "... _autoku_msgs_generate_messages_check_deps_VehicleInput"
 	@echo "... _autoku_msgs_generate_messages_check_deps_WaypointData"
 	@echo "... std_msgs_generate_messages_nodejs"
+	@echo "... _autoku_msgs_generate_messages_check_deps_LocalWaypointData"
 	@echo "... std_msgs_generate_messages_py"
 	@echo "... autoku_msgs_generate_messages"
-	@echo "... autoku_msgs_generate_messages_cpp"
-	@echo "... tf_generate_messages_eus"
+	@echo "... controller"
 	@echo "... rosgraph_msgs_generate_messages_eus"
 	@echo "... actionlib_msgs_generate_messages_cpp"
 	@echo "... tf_generate_messages_cpp"
@@ -1170,6 +1210,8 @@ help:
 	@echo "... roscpp_generate_messages_nodejs"
 	@echo "... roscpp_generate_messages_py"
 	@echo "... sensor_msgs_generate_messages_lisp"
+	@echo "... tf_generate_messages_eus"
+	@echo "... waypoint_generator"
 	@echo "... actionlib_generate_messages_cpp"
 	@echo "... roscpp_generate_messages_cpp"
 	@echo "... sensor_msgs_generate_messages_nodejs"
@@ -1177,6 +1219,7 @@ help:
 	@echo "... tf_generate_messages_py"
 	@echo "... sensor_msgs_generate_messages_py"
 	@echo "... actionlib_generate_messages_lisp"
+	@echo "... actionlib_generate_messages_nodejs"
 	@echo "... actionlib_generate_messages_py"
 	@echo "... actionlib_msgs_generate_messages_eus"
 	@echo "... actionlib_msgs_generate_messages_lisp"
@@ -1184,7 +1227,6 @@ help:
 	@echo "... tf2_msgs_generate_messages_cpp"
 	@echo "... tf2_msgs_generate_messages_py"
 	@echo "... tf2_msgs_generate_messages_lisp"
-	@echo "... actionlib_generate_messages_nodejs"
 	@echo "... display"
 	@echo "... model"
 	@echo "... csv2waypoints"

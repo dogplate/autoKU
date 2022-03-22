@@ -228,6 +228,21 @@ autoku_msgs_gencpp/fast:
 .PHONY : autoku_msgs_gencpp/fast
 
 # Convenience name for target.
+autoku_msgs/CMakeFiles/autoku_msgs_generate_messages_cpp.dir/rule:
+	cd /home/labdog/autoKU_ws/build && $(MAKE) -f CMakeFiles/Makefile2 autoku_msgs/CMakeFiles/autoku_msgs_generate_messages_cpp.dir/rule
+.PHONY : autoku_msgs/CMakeFiles/autoku_msgs_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+autoku_msgs_generate_messages_cpp: autoku_msgs/CMakeFiles/autoku_msgs_generate_messages_cpp.dir/rule
+
+.PHONY : autoku_msgs_generate_messages_cpp
+
+# fast build rule for target.
+autoku_msgs_generate_messages_cpp/fast:
+	cd /home/labdog/autoKU_ws/build && $(MAKE) -f autoku_msgs/CMakeFiles/autoku_msgs_generate_messages_cpp.dir/build.make autoku_msgs/CMakeFiles/autoku_msgs_generate_messages_cpp.dir/build
+.PHONY : autoku_msgs_generate_messages_cpp/fast
+
+# Convenience name for target.
 autoku_msgs/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/rule:
 	cd /home/labdog/autoKU_ws/build && $(MAKE) -f CMakeFiles/Makefile2 autoku_msgs/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/rule
 .PHONY : autoku_msgs/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/rule
@@ -498,6 +513,21 @@ std_msgs_generate_messages_nodejs/fast:
 .PHONY : std_msgs_generate_messages_nodejs/fast
 
 # Convenience name for target.
+autoku_msgs/CMakeFiles/_autoku_msgs_generate_messages_check_deps_LocalWaypointData.dir/rule:
+	cd /home/labdog/autoKU_ws/build && $(MAKE) -f CMakeFiles/Makefile2 autoku_msgs/CMakeFiles/_autoku_msgs_generate_messages_check_deps_LocalWaypointData.dir/rule
+.PHONY : autoku_msgs/CMakeFiles/_autoku_msgs_generate_messages_check_deps_LocalWaypointData.dir/rule
+
+# Convenience name for target.
+_autoku_msgs_generate_messages_check_deps_LocalWaypointData: autoku_msgs/CMakeFiles/_autoku_msgs_generate_messages_check_deps_LocalWaypointData.dir/rule
+
+.PHONY : _autoku_msgs_generate_messages_check_deps_LocalWaypointData
+
+# fast build rule for target.
+_autoku_msgs_generate_messages_check_deps_LocalWaypointData/fast:
+	cd /home/labdog/autoKU_ws/build && $(MAKE) -f autoku_msgs/CMakeFiles/_autoku_msgs_generate_messages_check_deps_LocalWaypointData.dir/build.make autoku_msgs/CMakeFiles/_autoku_msgs_generate_messages_check_deps_LocalWaypointData.dir/build
+.PHONY : _autoku_msgs_generate_messages_check_deps_LocalWaypointData/fast
+
+# Convenience name for target.
 autoku_msgs/CMakeFiles/std_msgs_generate_messages_py.dir/rule:
 	cd /home/labdog/autoKU_ws/build && $(MAKE) -f CMakeFiles/Makefile2 autoku_msgs/CMakeFiles/std_msgs_generate_messages_py.dir/rule
 .PHONY : autoku_msgs/CMakeFiles/std_msgs_generate_messages_py.dir/rule
@@ -527,21 +557,6 @@ autoku_msgs_generate_messages/fast:
 	cd /home/labdog/autoKU_ws/build && $(MAKE) -f autoku_msgs/CMakeFiles/autoku_msgs_generate_messages.dir/build.make autoku_msgs/CMakeFiles/autoku_msgs_generate_messages.dir/build
 .PHONY : autoku_msgs_generate_messages/fast
 
-# Convenience name for target.
-autoku_msgs/CMakeFiles/autoku_msgs_generate_messages_cpp.dir/rule:
-	cd /home/labdog/autoKU_ws/build && $(MAKE) -f CMakeFiles/Makefile2 autoku_msgs/CMakeFiles/autoku_msgs_generate_messages_cpp.dir/rule
-.PHONY : autoku_msgs/CMakeFiles/autoku_msgs_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-autoku_msgs_generate_messages_cpp: autoku_msgs/CMakeFiles/autoku_msgs_generate_messages_cpp.dir/rule
-
-.PHONY : autoku_msgs_generate_messages_cpp
-
-# fast build rule for target.
-autoku_msgs_generate_messages_cpp/fast:
-	cd /home/labdog/autoKU_ws/build && $(MAKE) -f autoku_msgs/CMakeFiles/autoku_msgs_generate_messages_cpp.dir/build.make autoku_msgs/CMakeFiles/autoku_msgs_generate_messages_cpp.dir/build
-.PHONY : autoku_msgs_generate_messages_cpp/fast
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -556,6 +571,7 @@ help:
 	@echo "... autoku_msgs_genlisp"
 	@echo "... autoku_msgs_generate_messages_eus"
 	@echo "... autoku_msgs_gencpp"
+	@echo "... autoku_msgs_generate_messages_cpp"
 	@echo "... edit_cache"
 	@echo "... geometry_msgs_generate_messages_nodejs"
 	@echo "... autoku_msgs_generate_messages_py"
@@ -577,9 +593,9 @@ help:
 	@echo "... _autoku_msgs_generate_messages_check_deps_VehicleInput"
 	@echo "... _autoku_msgs_generate_messages_check_deps_WaypointData"
 	@echo "... std_msgs_generate_messages_nodejs"
+	@echo "... _autoku_msgs_generate_messages_check_deps_LocalWaypointData"
 	@echo "... std_msgs_generate_messages_py"
 	@echo "... autoku_msgs_generate_messages"
-	@echo "... autoku_msgs_generate_messages_cpp"
 .PHONY : help
 
 

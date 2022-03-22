@@ -42,6 +42,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
     "/home/labdog/autoKU_ws/src/autoku_msgs/msg/VehicleOutput.msg"
     "/home/labdog/autoKU_ws/src/autoku_msgs/msg/VehicleInput.msg"
     "/home/labdog/autoKU_ws/src/autoku_msgs/msg/WaypointData.msg"
+    "/home/labdog/autoKU_ws/src/autoku_msgs/msg/LocalWaypointData.msg"
     )
 endif()
 

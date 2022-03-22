@@ -1,6 +1,6 @@
 # generated from genmsg/cmake/pkg-genmsg.cmake.em
 
-message(STATUS "autoku_msgs: 3 messages, 0 services")
+message(STATUS "autoku_msgs: 4 messages, 0 services")
 
 set(MSG_I_FLAGS "-Iautoku_msgs:/home/labdog/autoKU_ws/src/autoku_msgs/msg;-Igeometry_msgs:/opt/ros/melodic/share/geometry_msgs/cmake/../msg;-Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg")
 
@@ -16,6 +16,11 @@ add_custom_target(autoku_msgs_generate_messages ALL)
 # verify that message/service dependencies have not changed since configure
 
 
+
+get_filename_component(_filename "/home/labdog/autoKU_ws/src/autoku_msgs/msg/LocalWaypointData.msg" NAME_WE)
+add_custom_target(_autoku_msgs_generate_messages_check_deps_${_filename}
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "autoku_msgs" "/home/labdog/autoKU_ws/src/autoku_msgs/msg/LocalWaypointData.msg" "geometry_msgs/Point"
+)
 
 get_filename_component(_filename "/home/labdog/autoKU_ws/src/autoku_msgs/msg/VehicleInput.msg" NAME_WE)
 add_custom_target(_autoku_msgs_generate_messages_check_deps_${_filename}
@@ -38,6 +43,12 @@ add_custom_target(_autoku_msgs_generate_messages_check_deps_${_filename}
 
 ### Section generating for lang: gencpp
 ### Generating Messages
+_generate_msg_cpp(autoku_msgs
+  "/home/labdog/autoKU_ws/src/autoku_msgs/msg/LocalWaypointData.msg"
+  "${MSG_I_FLAGS}"
+  "/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Point.msg"
+  ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/autoku_msgs
+)
 _generate_msg_cpp(autoku_msgs
   "/home/labdog/autoKU_ws/src/autoku_msgs/msg/VehicleInput.msg"
   "${MSG_I_FLAGS}"
@@ -71,6 +82,8 @@ add_custom_target(autoku_msgs_generate_messages_cpp
 add_dependencies(autoku_msgs_generate_messages autoku_msgs_generate_messages_cpp)
 
 # add dependencies to all check dependencies targets
+get_filename_component(_filename "/home/labdog/autoKU_ws/src/autoku_msgs/msg/LocalWaypointData.msg" NAME_WE)
+add_dependencies(autoku_msgs_generate_messages_cpp _autoku_msgs_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/labdog/autoKU_ws/src/autoku_msgs/msg/VehicleInput.msg" NAME_WE)
 add_dependencies(autoku_msgs_generate_messages_cpp _autoku_msgs_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/labdog/autoKU_ws/src/autoku_msgs/msg/VehicleOutput.msg" NAME_WE)
@@ -87,6 +100,12 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS autoku_msgs_generate_messages_cpp)
 
 ### Section generating for lang: geneus
 ### Generating Messages
+_generate_msg_eus(autoku_msgs
+  "/home/labdog/autoKU_ws/src/autoku_msgs/msg/LocalWaypointData.msg"
+  "${MSG_I_FLAGS}"
+  "/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Point.msg"
+  ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/autoku_msgs
+)
 _generate_msg_eus(autoku_msgs
   "/home/labdog/autoKU_ws/src/autoku_msgs/msg/VehicleInput.msg"
   "${MSG_I_FLAGS}"
@@ -120,6 +139,8 @@ add_custom_target(autoku_msgs_generate_messages_eus
 add_dependencies(autoku_msgs_generate_messages autoku_msgs_generate_messages_eus)
 
 # add dependencies to all check dependencies targets
+get_filename_component(_filename "/home/labdog/autoKU_ws/src/autoku_msgs/msg/LocalWaypointData.msg" NAME_WE)
+add_dependencies(autoku_msgs_generate_messages_eus _autoku_msgs_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/labdog/autoKU_ws/src/autoku_msgs/msg/VehicleInput.msg" NAME_WE)
 add_dependencies(autoku_msgs_generate_messages_eus _autoku_msgs_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/labdog/autoKU_ws/src/autoku_msgs/msg/VehicleOutput.msg" NAME_WE)
@@ -136,6 +157,12 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS autoku_msgs_generate_messages_eus)
 
 ### Section generating for lang: genlisp
 ### Generating Messages
+_generate_msg_lisp(autoku_msgs
+  "/home/labdog/autoKU_ws/src/autoku_msgs/msg/LocalWaypointData.msg"
+  "${MSG_I_FLAGS}"
+  "/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Point.msg"
+  ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/autoku_msgs
+)
 _generate_msg_lisp(autoku_msgs
   "/home/labdog/autoKU_ws/src/autoku_msgs/msg/VehicleInput.msg"
   "${MSG_I_FLAGS}"
@@ -169,6 +196,8 @@ add_custom_target(autoku_msgs_generate_messages_lisp
 add_dependencies(autoku_msgs_generate_messages autoku_msgs_generate_messages_lisp)
 
 # add dependencies to all check dependencies targets
+get_filename_component(_filename "/home/labdog/autoKU_ws/src/autoku_msgs/msg/LocalWaypointData.msg" NAME_WE)
+add_dependencies(autoku_msgs_generate_messages_lisp _autoku_msgs_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/labdog/autoKU_ws/src/autoku_msgs/msg/VehicleInput.msg" NAME_WE)
 add_dependencies(autoku_msgs_generate_messages_lisp _autoku_msgs_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/labdog/autoKU_ws/src/autoku_msgs/msg/VehicleOutput.msg" NAME_WE)
@@ -185,6 +214,12 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS autoku_msgs_generate_messages_lisp)
 
 ### Section generating for lang: gennodejs
 ### Generating Messages
+_generate_msg_nodejs(autoku_msgs
+  "/home/labdog/autoKU_ws/src/autoku_msgs/msg/LocalWaypointData.msg"
+  "${MSG_I_FLAGS}"
+  "/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Point.msg"
+  ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/autoku_msgs
+)
 _generate_msg_nodejs(autoku_msgs
   "/home/labdog/autoKU_ws/src/autoku_msgs/msg/VehicleInput.msg"
   "${MSG_I_FLAGS}"
@@ -218,6 +253,8 @@ add_custom_target(autoku_msgs_generate_messages_nodejs
 add_dependencies(autoku_msgs_generate_messages autoku_msgs_generate_messages_nodejs)
 
 # add dependencies to all check dependencies targets
+get_filename_component(_filename "/home/labdog/autoKU_ws/src/autoku_msgs/msg/LocalWaypointData.msg" NAME_WE)
+add_dependencies(autoku_msgs_generate_messages_nodejs _autoku_msgs_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/labdog/autoKU_ws/src/autoku_msgs/msg/VehicleInput.msg" NAME_WE)
 add_dependencies(autoku_msgs_generate_messages_nodejs _autoku_msgs_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/labdog/autoKU_ws/src/autoku_msgs/msg/VehicleOutput.msg" NAME_WE)
@@ -234,6 +271,12 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS autoku_msgs_generate_messages_nodej
 
 ### Section generating for lang: genpy
 ### Generating Messages
+_generate_msg_py(autoku_msgs
+  "/home/labdog/autoKU_ws/src/autoku_msgs/msg/LocalWaypointData.msg"
+  "${MSG_I_FLAGS}"
+  "/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Point.msg"
+  ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/autoku_msgs
+)
 _generate_msg_py(autoku_msgs
   "/home/labdog/autoKU_ws/src/autoku_msgs/msg/VehicleInput.msg"
   "${MSG_I_FLAGS}"
@@ -267,6 +310,8 @@ add_custom_target(autoku_msgs_generate_messages_py
 add_dependencies(autoku_msgs_generate_messages autoku_msgs_generate_messages_py)
 
 # add dependencies to all check dependencies targets
+get_filename_component(_filename "/home/labdog/autoKU_ws/src/autoku_msgs/msg/LocalWaypointData.msg" NAME_WE)
+add_dependencies(autoku_msgs_generate_messages_py _autoku_msgs_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/labdog/autoKU_ws/src/autoku_msgs/msg/VehicleInput.msg" NAME_WE)
 add_dependencies(autoku_msgs_generate_messages_py _autoku_msgs_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/labdog/autoKU_ws/src/autoku_msgs/msg/VehicleOutput.msg" NAME_WE)

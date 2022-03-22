@@ -1,4 +1,5 @@
 file(REMOVE_RECURSE
+  "/home/labdog/autoKU_ws/devel/share/common-lisp/ros/autoku_msgs/msg/LocalWaypointData.lisp"
   "/home/labdog/autoKU_ws/devel/share/common-lisp/ros/autoku_msgs/msg/VehicleInput.lisp"
   "/home/labdog/autoKU_ws/devel/share/common-lisp/ros/autoku_msgs/msg/VehicleOutput.lisp"
   "/home/labdog/autoKU_ws/devel/share/common-lisp/ros/autoku_msgs/msg/WaypointData.lisp"

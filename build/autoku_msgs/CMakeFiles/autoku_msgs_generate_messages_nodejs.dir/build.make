@@ -53,28 +53,36 @@ CMAKE_BINARY_DIR = /home/labdog/autoKU_ws/build
 # Include the progress variables for this target.
 include autoku_msgs/CMakeFiles/autoku_msgs_generate_messages_nodejs.dir/progress.make
 
+autoku_msgs/CMakeFiles/autoku_msgs_generate_messages_nodejs: /home/labdog/autoKU_ws/devel/share/gennodejs/ros/autoku_msgs/msg/LocalWaypointData.js
 autoku_msgs/CMakeFiles/autoku_msgs_generate_messages_nodejs: /home/labdog/autoKU_ws/devel/share/gennodejs/ros/autoku_msgs/msg/VehicleInput.js
 autoku_msgs/CMakeFiles/autoku_msgs_generate_messages_nodejs: /home/labdog/autoKU_ws/devel/share/gennodejs/ros/autoku_msgs/msg/VehicleOutput.js
 autoku_msgs/CMakeFiles/autoku_msgs_generate_messages_nodejs: /home/labdog/autoKU_ws/devel/share/gennodejs/ros/autoku_msgs/msg/WaypointData.js
 
 
+/home/labdog/autoKU_ws/devel/share/gennodejs/ros/autoku_msgs/msg/LocalWaypointData.js: /opt/ros/melodic/lib/gennodejs/gen_nodejs.py
+/home/labdog/autoKU_ws/devel/share/gennodejs/ros/autoku_msgs/msg/LocalWaypointData.js: /home/labdog/autoKU_ws/src/autoku_msgs/msg/LocalWaypointData.msg
+/home/labdog/autoKU_ws/devel/share/gennodejs/ros/autoku_msgs/msg/LocalWaypointData.js: /opt/ros/melodic/share/geometry_msgs/msg/Point.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/labdog/autoKU_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Javascript code from autoku_msgs/LocalWaypointData.msg"
+	cd /home/labdog/autoKU_ws/build/autoku_msgs && ../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/labdog/autoKU_ws/src/autoku_msgs/msg/LocalWaypointData.msg -Iautoku_msgs:/home/labdog/autoKU_ws/src/autoku_msgs/msg -Igeometry_msgs:/opt/ros/melodic/share/geometry_msgs/cmake/../msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p autoku_msgs -o /home/labdog/autoKU_ws/devel/share/gennodejs/ros/autoku_msgs/msg
+
 /home/labdog/autoKU_ws/devel/share/gennodejs/ros/autoku_msgs/msg/VehicleInput.js: /opt/ros/melodic/lib/gennodejs/gen_nodejs.py
 /home/labdog/autoKU_ws/devel/share/gennodejs/ros/autoku_msgs/msg/VehicleInput.js: /home/labdog/autoKU_ws/src/autoku_msgs/msg/VehicleInput.msg
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/labdog/autoKU_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Javascript code from autoku_msgs/VehicleInput.msg"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/labdog/autoKU_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating Javascript code from autoku_msgs/VehicleInput.msg"
 	cd /home/labdog/autoKU_ws/build/autoku_msgs && ../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/labdog/autoKU_ws/src/autoku_msgs/msg/VehicleInput.msg -Iautoku_msgs:/home/labdog/autoKU_ws/src/autoku_msgs/msg -Igeometry_msgs:/opt/ros/melodic/share/geometry_msgs/cmake/../msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p autoku_msgs -o /home/labdog/autoKU_ws/devel/share/gennodejs/ros/autoku_msgs/msg
 
 /home/labdog/autoKU_ws/devel/share/gennodejs/ros/autoku_msgs/msg/VehicleOutput.js: /opt/ros/melodic/lib/gennodejs/gen_nodejs.py
 /home/labdog/autoKU_ws/devel/share/gennodejs/ros/autoku_msgs/msg/VehicleOutput.js: /home/labdog/autoKU_ws/src/autoku_msgs/msg/VehicleOutput.msg
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/labdog/autoKU_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating Javascript code from autoku_msgs/VehicleOutput.msg"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/labdog/autoKU_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating Javascript code from autoku_msgs/VehicleOutput.msg"
 	cd /home/labdog/autoKU_ws/build/autoku_msgs && ../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/labdog/autoKU_ws/src/autoku_msgs/msg/VehicleOutput.msg -Iautoku_msgs:/home/labdog/autoKU_ws/src/autoku_msgs/msg -Igeometry_msgs:/opt/ros/melodic/share/geometry_msgs/cmake/../msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p autoku_msgs -o /home/labdog/autoKU_ws/devel/share/gennodejs/ros/autoku_msgs/msg
 
 /home/labdog/autoKU_ws/devel/share/gennodejs/ros/autoku_msgs/msg/WaypointData.js: /opt/ros/melodic/lib/gennodejs/gen_nodejs.py
 /home/labdog/autoKU_ws/devel/share/gennodejs/ros/autoku_msgs/msg/WaypointData.js: /home/labdog/autoKU_ws/src/autoku_msgs/msg/WaypointData.msg
 /home/labdog/autoKU_ws/devel/share/gennodejs/ros/autoku_msgs/msg/WaypointData.js: /opt/ros/melodic/share/geometry_msgs/msg/Point.msg
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/labdog/autoKU_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating Javascript code from autoku_msgs/WaypointData.msg"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/labdog/autoKU_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating Javascript code from autoku_msgs/WaypointData.msg"
 	cd /home/labdog/autoKU_ws/build/autoku_msgs && ../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/labdog/autoKU_ws/src/autoku_msgs/msg/WaypointData.msg -Iautoku_msgs:/home/labdog/autoKU_ws/src/autoku_msgs/msg -Igeometry_msgs:/opt/ros/melodic/share/geometry_msgs/cmake/../msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p autoku_msgs -o /home/labdog/autoKU_ws/devel/share/gennodejs/ros/autoku_msgs/msg
 
 autoku_msgs_generate_messages_nodejs: autoku_msgs/CMakeFiles/autoku_msgs_generate_messages_nodejs
+autoku_msgs_generate_messages_nodejs: /home/labdog/autoKU_ws/devel/share/gennodejs/ros/autoku_msgs/msg/LocalWaypointData.js
 autoku_msgs_generate_messages_nodejs: /home/labdog/autoKU_ws/devel/share/gennodejs/ros/autoku_msgs/msg/VehicleInput.js
 autoku_msgs_generate_messages_nodejs: /home/labdog/autoKU_ws/devel/share/gennodejs/ros/autoku_msgs/msg/VehicleOutput.js
 autoku_msgs_generate_messages_nodejs: /home/labdog/autoKU_ws/devel/share/gennodejs/ros/autoku_msgs/msg/WaypointData.js
