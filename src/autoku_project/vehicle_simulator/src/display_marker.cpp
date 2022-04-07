@@ -1,5 +1,7 @@
 #include "autoku_msgs/WaypointData.h"
+#include "autoku_msgs/LocalWaypointData.h"
 #include "autoku_msgs/VehicleOutput.h"
+
 #include "visualization_msgs/Marker.h"
 #include "visualization_msgs/MarkerArray.h"
 #include <math.h>
@@ -16,6 +18,9 @@ protected:
   ros::Publisher m_rosPubWaypointMarkerArray;
   ros::Subscriber m_rosSubWaypoints;
 
+  ros::Publisher m_rosPubLocalWaypointMarkerArray;
+  ros::Subscriber m_rosSubLocalWaypoints;
+
   ros::Publisher m_rosPubVehicleMarker;
   ros::Subscriber m_rosSubVehicleOutput;
 
@@ -25,14 +30,17 @@ public:
     m_rosPubWaypointMarkerArray =
         m_rosNodeHandler.advertise<visualization_msgs::MarkerArray>(
             "csv_waypoints_marker", 10);
-            
     m_rosSubWaypoints = m_rosNodeHandler.subscribe(
         "csv_waypoints", 10, &Display::csvWaypointsCallback, this);
 
-
+    m_rosPubLocalWaypointMarkerArray =
+        m_rosNodeHandler.advertise<visualization_msgs::MarkerArray>(
+            "local_waypoints_marker", 10); 
+    m_rosSubLocalWaypoints = m_rosNodeHandler.subscribe(
+        "local_waypoints", 10, &Display::localWaypointsCallback, this);
+        
     m_rosPubVehicleMarker =
-        m_rosNodeHandler.advertise<visualization_msgs::Marker>("vehicle_mark",
-                                                               100);
+        m_rosNodeHandler.advertise<visualization_msgs::Marker>("vehicle_mark", 100);
     m_rosSubVehicleOutput = m_rosNodeHandler.subscribe(
       "vehicle_output", 10, &Display::vehicleOutputCallback, this);
 
@@ -69,7 +77,7 @@ public:
         marker.color.r = 0.03f;
         marker.color.g = 0.9f;
         marker.color.b = 0.1f;
-        marker.color.a = 0.7;
+        marker.color.a = 0.3;
         marker.scale.x = 0.5;
         marker.scale.y = 0.9;
         marker.lifetime = ros::Duration();
@@ -89,6 +97,58 @@ public:
     }
     
   }
+
+protected:
+  autoku_msgs::LocalWaypointData m_localWaypoints;
+
+public:
+  void localWaypointsCallback(const autoku_msgs::LocalWaypointData::ConstPtr &msg) {
+    m_localWaypoints.frame_id = msg->frame_id;
+    m_localWaypoints.points = msg->points;
+  }
+
+  // Waypoints visualization
+  void mark_localWaypoints() {
+
+    int id = 0;
+
+    visualization_msgs::MarkerArray markerArray;
+    ROS_INFO_STREAM(m_localWaypoints.points.size());
+    if(m_localWaypoints.points.size()>0){
+      for (auto i_point = 0; i_point < m_localWaypoints.points.size()-1; i_point++) {
+        visualization_msgs::Marker marker;
+        
+        marker.header.frame_id = m_localWaypoints.frame_id;
+        marker.header.stamp = ros::Time::now();
+        marker.id = id++;
+        marker.action = visualization_msgs::Marker::ADD;
+        marker.pose.orientation.w = 1.0;
+        marker.color.r = 0.9f;
+        marker.color.g = 0.03f;
+        marker.color.b = 0.1f;
+        marker.color.a = 0.8;
+        marker.scale.x = 0.1;
+        marker.scale.y = 0.1;
+        marker.lifetime = ros::Duration(0.1);
+        marker.type = visualization_msgs::Marker::POINTS;
+        
+        geometry_msgs::Point startPoint, endPoint;
+        startPoint.x = m_localWaypoints.points[i_point].x;
+        startPoint.y = m_localWaypoints.points[i_point].y;
+        endPoint.x = m_localWaypoints.points[i_point+1].x;
+        endPoint.y = m_localWaypoints.points[i_point+1].y;
+        marker.points.push_back(startPoint);
+        marker.points.push_back(endPoint);
+        markerArray.markers.push_back(marker);
+      }
+
+      m_rosPubLocalWaypointMarkerArray.publish(markerArray);
+    }
+    
+  }
+
+
+
 
   protected:
     std::string m_sVehicle_id = "";
@@ -174,6 +234,7 @@ int main(int argc, char **argv) {
     if ((ros::Time::now().toSec() - prev_vehiclesMarkTime) > 0.1) {
       prev_vehiclesMarkTime = ros::Time::now().toSec();
       display.markVehicle();
+      display.mark_localWaypoints();
     }
     ros::spinOnce();
     loop_rate.sleep();

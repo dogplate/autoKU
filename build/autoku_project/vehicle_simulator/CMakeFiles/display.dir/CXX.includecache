@@ -6,6 +6,24 @@
 
 #IncludeRegexTransform: 
 
+/home/labdog/autoKU_ws/devel/include/autoku_msgs/LocalWaypointData.h
+string
+-
+vector
+-
+map
+-
+ros/types.h
+-
+ros/serialization.h
+-
+ros/builtin_message_traits.h
+-
+ros/message_operations.h
+-
+geometry_msgs/Point.h
+-
+
 /home/labdog/autoKU_ws/devel/include/autoku_msgs/VehicleOutput.h
 string
 -
@@ -43,6 +61,8 @@ geometry_msgs/Point.h
 /home/labdog/autoKU_ws/src/autoku_project/vehicle_simulator/src/display_marker.cpp
 autoku_msgs/WaypointData.h
 /home/labdog/autoKU_ws/src/autoku_project/vehicle_simulator/src/autoku_msgs/WaypointData.h
+autoku_msgs/LocalWaypointData.h
+/home/labdog/autoKU_ws/src/autoku_project/vehicle_simulator/src/autoku_msgs/LocalWaypointData.h
 autoku_msgs/VehicleOutput.h
 /home/labdog/autoKU_ws/src/autoku_project/vehicle_simulator/src/autoku_msgs/VehicleOutput.h
 visualization_msgs/Marker.h
